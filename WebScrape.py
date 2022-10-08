@@ -70,7 +70,7 @@ def getClassrooms(scraper):
     #WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//td[@id='PTSRCHRESULTS0']")))
 
 def enterInformation(scraper):
-    time.sleep(1)
+    time.sleep(2)
     # entering all of the information
     startDate = scraper.driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_START_DT']") # start date of the week
     startDate[0].clear()
