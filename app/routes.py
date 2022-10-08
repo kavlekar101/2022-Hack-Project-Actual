@@ -1,35 +1,36 @@
 from app import app
+from flask import Flask, redirect, url_for, render_template, session
+from flask_wtf import FlaskForm
+from wtforms.fields import DateField
+from wtforms.validators import DataRequired
+from wtforms import validators, SubmitField
 from flask import render_template
 from flask import Flask, render_template, request, url_for, flash, redirect
-
+import WebScrape
+import time
 
 @app.route('/')
 @app.route('/index')
 def index():
 	return render_template('index.html')
 
-messages = []
+
+class InfoForm(FlaskForm):
+	startdate = DateField('Start Date', format='%Y-%m-%d', validators=(validators.DataRequired(),))
+	submit = SubmitField('Submit')
+
+
 @app.route('/script', methods=('GET', 'POST'))
 def script():
-	if request.method == 'POST':
+	form = InfoForm()
+	if form.validate_on_submit():
 		building = request.form['building']
-		day = request.form['day']
-		startT = request.form['startT']
-		endT = request.form['endT']
-		if not building:
-			flash('Title is required!')
-		elif not day:
-			flash('Content is required!')
-		elif not startT:
-			flash("Start Time is required!")
-		elif not endT:
-			flash("End Time is required!")
-		else:
-			messages.clear()
-			messages.append({'building': building, 'day': day, 'startT': startT, 'endT': endT})
-			print(messages)
-			return redirect(url_for('script'))
+		startT = request.form['appt1']
+		endT = request.form['appt2']
+		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
+		WebScrape.test(building, day, startT, endT)
+		return redirect(url_for('script'))
+	return render_template('script.html', form=form)
 
-		
 
-	return render_template('script.html')
+	
