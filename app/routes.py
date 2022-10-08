@@ -7,6 +7,7 @@ from flask import Flask, request, render_template
 def index():
 	return render_template('index.html')
 
+<<<<<<< HEAD
 @app.route('/', methods =["GET", "POST"])
 def gfg():
     if request.method == "POST":
@@ -19,3 +20,8 @@ def gfg():
  
 if __name__=='__main__':
    app.run()
+=======
+@app.route('/script')
+def script():
+	return render_template('script.html')
+>>>>>>> 156beb864c5eb70a9e774bf24ea1abe1b8024b97
