@@ -13,6 +13,10 @@ def test():
     # go to the calendar frame
     s.switchToCal()
 
+    # enters the initial information
+    WebScrape.enterInformation(s)
+
+    time.sleep(1)
     # gets the classrooms by switching frames
     rooms = WebScrape.getClassrooms(s)
 
@@ -23,7 +27,7 @@ def test():
     availRooms = []
     time.sleep(1)
     for r in rooms:
-        if WebScrape.enterInformation(s, r):
+        if WebScrape.changeRooms(s, r):
             availRooms.append(r)
 
     print("The available rooms are")
