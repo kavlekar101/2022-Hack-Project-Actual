@@ -6,8 +6,9 @@ from wtforms.validators import DataRequired
 from wtforms import validators, SubmitField
 from flask import render_template
 from flask import Flask, render_template, request, url_for, flash, redirect
-import TestScript
+import WebScrape
 import time
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -18,7 +19,7 @@ class InfoForm(FlaskForm):
 	startdate = DateField('Start Date', format='%Y-%m-%d', validators=(validators.DataRequired(),))
 	submit = SubmitField('Submit')
 
-messages = []
+
 @app.route('/script', methods=('GET', 'POST'))
 def script():
 	form = InfoForm()
@@ -27,10 +28,7 @@ def script():
 		startT = request.form['appt1']
 		endT = request.form['appt2']
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
-		messages.clear()
-		messages.append({'building': building, 'day': day, 'startT': startT, 'endT': endT})
-		print(messages)
-		TestScript.test()
+		WebScrape.test(building, day, startT, endT)
 		return redirect(url_for('script'))
 	return render_template('script.html', form=form)
 
