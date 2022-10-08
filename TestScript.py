@@ -21,7 +21,7 @@ def test():
     s.switchToCal()
 
     availRooms = []
-    time.sleep(10)
+    time.sleep(1)
     for r in rooms:
         if WebScrape.enterInformation(s, r):
             availRooms.append(r)
