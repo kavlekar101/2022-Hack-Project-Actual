@@ -25,9 +25,10 @@ def script():
 		elif not endT:
 			flash("End Time is required!")
 		else:
+			messages.clear()
 			messages.append({'building': building, 'day': day, 'startT': startT, 'endT': endT})
 			print(messages)
-			return redirect(url_for('index'))
+			return redirect(url_for('script'))
 
 		
 
