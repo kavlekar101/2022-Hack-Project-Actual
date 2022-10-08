@@ -1,7 +1,8 @@
 from app import app
 from flask import render_template
 from flask import Flask, render_template, request, url_for, flash, redirect
-import TestScript
+import WebScrape
+import time
 
 @app.route('/')
 @app.route('/index')
@@ -28,7 +29,9 @@ def script():
 			messages.clear()
 			messages.append({'building': building, 'day': day, 'startT': startT, 'endT': endT})
 			print(messages)
-			TestScript.test()
+			startTime = time.time()
+			WebScrape.test(building, day, startT, endT)
+			print(time.time() - startTime)
 			return redirect(url_for('script'))
 
 		

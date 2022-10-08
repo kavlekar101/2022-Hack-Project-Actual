@@ -12,6 +12,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.options import Options
 
 # this is the most important
 # I need to switch frames I think https://stackoverflow.com/questions/48895434/selecting-item-in-nested-html-frame-with-selenium-webdriver
@@ -23,7 +24,9 @@ class Scraper:
         self.day = day
         self.startT = startT
         self.endT = endT
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
     
     def start(self):
         self.driver.get("https://courses.osu.edu/psp/csosuct/EMPLOYEE/PUB/c/OSR_CUSTOM_MENU.OSR_ROOM_MATRIX.GBL?")
@@ -192,6 +195,39 @@ def clickDays(driver, days):
     refresh = driver.find_element(By.XPATH, "//a[@id='DERIVED_CLASS_S_SSR_REFRESH_CAL$38$']")
     refresh.click()
     time.sleep(1)
+
+def test(building, day, startT, endT):
+    s = Scraper(building, day, startT, endT)
+
+    s.start()
+
+    # go to the calendar frame
+    s.switchToCal()
+
+    # enters the initial information
+    enterInformation(s)
+
+    time.sleep(1)
+    # gets the classrooms by switching frames
+    rooms = getClassrooms(s)
+
+    # gets the calendar again
+    s.switchToDefault()
+    s.switchToCal()
+
+    availRooms = []
+    time.sleep(1)
+    room = s.driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_FACILITY_ID']") # this is the room number need to figure out a way to find all rooms especially classrooms
+    refreshCalendar = s.driver.find_element(By.XPATH, "//a[@id='DERIVED_CLASS_S_SSR_REFRESH_CAL']") # this finds the refresh calendar button
+    for r in rooms:
+        if changeRooms(s, r):
+            availRooms.append(r)
+
+    print("The available rooms are")
+    for ar in availRooms:
+        print(ar)
+
+    s.quit()
 
 # have to get to the frame with all of the textboxes so that I can enter the stuff
 # so first switch back to the original frame, then I can switch to the frame holding all the text input frames
