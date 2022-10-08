@@ -95,11 +95,11 @@ def enterInformation(scraper):
 
 def changeRooms(scraper, r):
     time.sleep(1)
-    room = scraper.driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_FACILITY_ID']") # this is the room number need to figure out a way to find all rooms especially classrooms
+    room = scraper.driver.find_elements(By.ID, "OSR_DERIVED_RM_FACILITY_ID") # this is the room number need to figure out a way to find all rooms especially classrooms
     room[0].clear()
     room[0].send_keys(r)
 
-    refreshCalendar = scraper.driver.find_element(By.XPATH, "//a[@id='DERIVED_CLASS_S_SSR_REFRESH_CAL']") # this finds the refresh calendar button
+    refreshCalendar = scraper.driver.find_element(By.ID, "DERIVED_CLASS_S_SSR_REFRESH_CAL") # this finds the refresh calendar button
     refreshCalendar.click() # acually refreshes it, but need sometime to access the actual calendar
 
     #time.sleep(10)
@@ -217,8 +217,6 @@ def test(building, day, startT, endT):
 
     availRooms = []
     time.sleep(1)
-    room = s.driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_FACILITY_ID']") # this is the room number need to figure out a way to find all rooms especially classrooms
-    refreshCalendar = s.driver.find_element(By.XPATH, "//a[@id='DERIVED_CLASS_S_SSR_REFRESH_CAL']") # this finds the refresh calendar button
     for r in rooms:
         if changeRooms(s, r):
             availRooms.append(r)
