@@ -72,23 +72,23 @@ def getClassrooms(scraper):
 def enterInformation(scraper):
     time.sleep(1)
     # entering all of the information
-    startDate = scraper.driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_START_DT']") # start date of the week
-    startDate[0].clear()
-    startDate[0].send_keys(scraper.day) # send it this date in this format, might need to tweak it later
+    startDate = scraper.driver.find_element(By.XPATH, "//input[@id='OSR_DERIVED_RM_START_DT']") # start date of the week
+    startDate.clear()
+    startDate.send_keys(scraper.day) # send it this date in this format, might need to tweak it later
 
     # time.sleep(random.randint(2,4))
-    endDate = scraper.driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_END_DT']") # end date of the week
-    endDate[0].clear()
-    endDate[0].send_keys(scraper.day) # send it this date in this format, might need to tweak it later
+    endDate = scraper.driver.find_element(By.XPATH, "//input[@id='OSR_DERIVED_RM_END_DT']") # end date of the week
+    endDate.clear()
+    endDate.send_keys(scraper.day) # send it this date in this format, might need to tweak it later
 
     # time.sleep(random.randint(3, 6))
-    startTime = scraper.driver.find_elements(By.XPATH, "//input[@id='DERIVED_CLASS_S_MEETING_TIME_START']")
-    startTime[0].clear()
-    startTime[0].send_keys(scraper.startT)
+    startTime = scraper.driver.find_element(By.XPATH, "//input[@id='DERIVED_CLASS_S_MEETING_TIME_START']")
+    startTime.clear()
+    startTime.send_keys(scraper.startT)
     
-    endTime = scraper.driver.find_elements(By.XPATH, "//input[@id='DERIVED_CLASS_S_MEETING_TIME_END']")
-    endTime[0].clear()
-    endTime[0].send_keys(scraper.endT)
+    endTime = scraper.driver.find_element(By.XPATH, "//input[@id='DERIVED_CLASS_S_MEETING_TIME_END']")
+    endTime.clear()
+    endTime.send_keys(scraper.endT)
 
 def changeRooms(scraper, r):
     time.sleep(1)
@@ -96,8 +96,8 @@ def changeRooms(scraper, r):
     room[0].clear()
     room[0].send_keys(r)
 
-    refreshCalendar = scraper.driver.find_elements(By.XPATH, "//a[@id='DERIVED_CLASS_S_SSR_REFRESH_CAL']") # this finds the refresh calendar button
-    refreshCalendar[0].click() # acually refreshes it, but need sometime to access the actual calendar
+    refreshCalendar = scraper.driver.find_element(By.XPATH, "//a[@id='DERIVED_CLASS_S_SSR_REFRESH_CAL']") # this finds the refresh calendar button
+    refreshCalendar.click() # acually refreshes it, but need sometime to access the actual calendar
 
     #time.sleep(10)
 
@@ -139,8 +139,6 @@ def regexStuff():
 # I can use regex to make sure that the dates are correct!
 
 # might have to do some other shit when I have to see the calendar stuff but it shouldn't be too hard
-
-#WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "/html[1]/body[1]/form[1]/div[5]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[4]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/input[1]")))
 
 def clickDays(driver, days):
     daysOfWeek = {"MONDAY": "//input[@id='DERIVED_CLASS_S_MONDAY_LBL$30$$chk']",
