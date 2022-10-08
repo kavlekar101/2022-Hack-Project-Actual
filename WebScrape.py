@@ -20,12 +20,27 @@ driver.get("https://courses.osu.edu/psp/csosuct/EMPLOYEE/PUB/c/OSR_CUSTOM_MENU.O
 # I need to switch frames I think https://stackoverflow.com/questions/48895434/selecting-item-in-nested-html-frame-with-selenium-webdriver
 # this gets into the frame where everything is
 
+class Scraper:
+    def __init__(building, day, startT, endT):
+        self.building = building
+        self.day = day
+        self.startT = startT
+        self.endT = endT
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    
+    def start():
+        driver.get("https://courses.osu.edu/psp/csosuct/EMPLOYEE/PUB/c/OSR_CUSTOM_MENU.OSR_ROOM_MATRIX.GBL?")
+    
+    def switchToCal():
+        WebDriverWait(self.driver, 10).until(EC.frame_to_be_available_and_switch_to_it(
+            (By.XPATH, "//iframe[@id='ptifrmtgtframe']")))
+
 WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it(
     (By.XPATH, "//iframe[@id='ptifrmtgtframe']")))
 
-def getClassrooms():
+def getClassrooms(driver):
     room = driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_FACILITY_ID']") # this is the room number need to figure out a way to find all rooms especially classrooms
-    room[0].send_keys(input("Enter the first letters of the building you wish to see:\n"))
+    room[0].send_keys(driver.building)
 
     # gets into the room list so that we can scrape it
     search = driver.find_element(By.XPATH, "//a[@id='OSR_DERIVED_RM_FACILITY_ID$prompt']")
@@ -43,36 +58,41 @@ def getClassrooms():
     rooms = driver.find_elements(
         By.XPATH, "//a[starts-with(@name, 'RESULT0$')]")
 
+    res = [r.get_attribute("innerHTML") for r in rooms]
+
     # click out of this frame
     cancel = driver.find_element(By.XPATH, "//input[@id='#ICCancel']")
     cancel.click()
     
     # this just gets the room number better? (I think)
-    return [r.get_attribute("innerHTML") for r in rooms]
+    return res
 
     #WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//td[@id='PTSRCHRESULTS0']")))
 
-def enterInformation(r, startD, endD, startT, endT):
-    time.sleep(2)
+def enterInformation(driver, r):
+    time.sleep(10)
     # entering all of the information
     startDate = driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_START_DT']") # start date of the week
-    startDate[0].send_keys(startD) # send it this date in this format, might need to tweak it later
+    startDate[0].clear()
+    startDate[0].send_keys(driver.startD) # send it this date in this format, might need to tweak it later
 
     # time.sleep(random.randint(2,4))
     endDate = driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_END_DT']") # end date of the week
-    endDate[0].send_keys(endD) # send it this date in this format, might need to tweak it later
+    endDate[0].clear()
+    endDate[0].send_keys(driver.endD) # send it this date in this format, might need to tweak it later
 
     # time.sleep(random.randint(3, 6))
     room = driver.find_elements(By.XPATH, "//input[@id='OSR_DERIVED_RM_FACILITY_ID']") # this is the room number need to figure out a way to find all rooms especially classrooms
+    room[0].clear()
     room[0].send_keys(r)
 
 
     # time.sleep(random.randint(3, 6))
     startTime = driver.find_elements(By.XPATH, "//input[@id='DERIVED_CLASS_S_MEETING_TIME_START']")
-    startTime[0].send_keys(startT)
+    startTime[0].send_keys(driver.startT)
 
     endTime = driver.find_elements(By.XPATH, "//input[@id='DERIVED_CLASS_S_MEETING_TIME_END']")
-    endTime[0].send_keys(endT)
+    endTime[0].send_keys(driver.endT)
 
     refreshCalendar = driver.find_elements(By.XPATH, "//a[@id='DERIVED_CLASS_S_SSR_REFRESH_CAL']") # this finds the refresh calendar button
     refreshCalendar[0].click() # acually refreshes it, but need sometime to access the actual calendar
@@ -120,7 +140,7 @@ def regexStuff():
 
 #WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "/html[1]/body[1]/form[1]/div[5]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/table[1]/tbody[1]/tr[4]/td[2]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/input[1]")))
 
-def clickDays(days):
+def clickDays(driver, days):
     daysOfWeek = {"MONDAY": "//input[@id='DERIVED_CLASS_S_MONDAY_LBL$30$$chk']",
                   "TUESDAY": "//input[@id='DERIVED_CLASS_S_TUESDAY_LBL$chk']",
                   "WEDNESDAY": "//input[@id='DERIVED_CLASS_S_WEDNESDAY_LBL$chk']",
@@ -173,40 +193,17 @@ def clickDays(days):
     refresh.click()
     time.sleep(5)
 
-days = input("Enter the days of the week that you wish to search for, and make sure that they are separated by only spaces:\n").split(" ")
-
-# clickDays(days)
-
-rooms = getClassrooms()
-
-availRooms = []
-
 # have to get to the frame with all of the textboxes so that I can enter the stuff
 # so first switch back to the original frame, then I can switch to the frame holding all the text input frames
+
 driver.switch_to.default_content()
 WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it(
     (By.XPATH, "//iframe[@id='ptifrmtgtframe']")))
 
-# enterInformation(rooms[0])
-
-time.sleep(10)
 '''startD = input("Enter the start date (properly formatted XX/XX/XXXX):\n")
 endD = input("Enter the start date (properly formatted XX/XX/XXXX):\n")
 startT = input("Enter the start time (properly formatted XX:XXAM or XX:XXPM):\n")
 endT = input("Enter the end time (properly formatted XX:XXAM or XX:XXPM):\n")'''
-
-startD = "10/06/2022"
-endD = "10/06/2022"
-startT = "08:00AM"
-endT = "10:00PM"
-time.sleep(10)
-for r in rooms:
-    if enterInformation(r, startD, endD, startT, endT):
-        availRooms.append(r)
-
-print("The available rooms are")
-for ar in availRooms:
-    print(ar)
 
 driver.quit()
 
