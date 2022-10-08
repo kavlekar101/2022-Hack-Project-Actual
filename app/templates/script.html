@@ -1,0 +1,25 @@
+{% block content %}
+    <h1>{% block title %} Enter Information {% endblock %}</h1>
+    <form method="post">
+        <p>Building</p>
+        <input type="text" name="building"
+               placeholder="Enter Building"
+               value="{{ request.form['building'] }}"></input>
+        <p>Day</p>
+        <input type="text" name="day"
+               placeholder="Enter Day"
+               value="{{ request.form['day'] }}"></input>
+ 
+        <p>Start Time</p>
+        <input type="text" name="startT"
+               placeholder="Enter Start Time"
+               value="{{ request.form['startT'] }}"></input>
+
+        <p>End Time</p>
+        <input type="text" name="endT"
+               placeholder="Enter End Time"
+               value="{{ request.form['endT'] }}"></input>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
