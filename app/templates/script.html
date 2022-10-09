@@ -1,10 +1,13 @@
 {% block content %}
-    <form action="" method='POST' name="myform">
+    <form action="script" method='POST' name="myform">
         {{ form.csrt_token }}
         <p>Building</p>
-        <input type="text" name="building"
-               placeholder="Enter Building"
-               value="{{ request.form['building'] }}"></input>
+        <select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
+       <option value="{{buildings[0]}}" selected>{{buildings[0]}}</option>
+       {% for building in buildings[1:] %}
+       <option value="{{building}}">{{building}}</option>
+       {% endfor %}
+       </select>
         {{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
         <p>Start Time</p>
         <input type="time" id="appt" name="appt1"
