@@ -6,6 +6,9 @@
   font-family: "Asap", sans-serif;
   scroll-behavior: smooth;
 }
+h4{
+  font-size: large;
+}
 a {
   text-decoration: none;
 }

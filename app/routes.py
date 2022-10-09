@@ -20,7 +20,7 @@ class InfoForm(FlaskForm):
 	submit = SubmitField('Submit')
 
 
-@app.route('/script', methods=('GET', 'POST'))
+@app.route('/base', methods=('GET', 'POST'))
 def script():
 	form = InfoForm()
 	if form.validate_on_submit():
@@ -28,7 +28,7 @@ def script():
 		startT = request.form['appt1']
 		endT = request.form['appt2']
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
-		results = WebScrape.test(building, day, startT, endT)
+		WebScrape.test(building, day, startT, endT)
 		return redirect(url_for('script'))
 	return render_template('script.html', form=form)
 
