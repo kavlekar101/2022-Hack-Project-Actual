@@ -220,12 +220,9 @@ def test(building, day, startT, endT):
     for r in rooms:
         if changeRooms(s, r):
             availRooms.append(r)
-
-    print("The available rooms are")
-    for ar in availRooms:
-        print(ar)
-
     s.quit()
+    return availRooms
+    
 
 # have to get to the frame with all of the textboxes so that I can enter the stuff
 # so first switch back to the original frame, then I can switch to the frame holding all the text input frames

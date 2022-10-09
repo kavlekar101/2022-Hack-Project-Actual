@@ -20,14 +20,14 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: darkgray;
+  background: #42455a;
   padding: 20px;
   text-align: center;
 }
 header nav a {
   padding: 10px 20px;
   font-size: 2rem;
-  color: white;
+  color: #e0ffff;
   border-radius: 5px;
   letter-spacing: 0.5px;
 }
@@ -37,13 +37,13 @@ header nav a:hover {
 	transition: 0.5s ease-out;
 }
 header nav a.active {
-  background: red;
+  background: #00c2cb;
   transition: all .5s ease-out;
-  color: black;
+  color: #42455a;
   transition: 0.5s ease-out;
 }
 body {
-  background: darkgray;
+  background: #42455a;
 }
 section {
   min-height: 100vh;
@@ -52,21 +52,21 @@ section {
   align-items: center;
 }
 section:nth-child(1) {
-  color: white;
+  color: #e0ffff;
 }
 section:nth-child(2) {
-  color: black;
-  background: white;
+  color: #42455a;
+  background: #e0ffff;
 }
 section:nth-child(3) {
-  color: white;
+  color: #e0ffff;
 }
 section:nth-child(4) {
-  color: black;
-  background: white;
+  color: #42455a;
+  background: #e0ffff;
 }
 section:nth-child(5) {
-  color: white;
+  color: #e0ffff;
 }
 section .container {
   margin: 100px;
@@ -86,7 +86,7 @@ section .text-container {
 section .text-container .text-box {
   margin: 20px;
   padding: 20px;
-  background: red;
+  background: #00c2cb;
 }
 section .text-container .text-box h3 {
   font-size: 30px;
@@ -118,15 +118,6 @@ section .text-container .text-box h3 {
 }
 
 
-
-
-body {
-	-webkit-font-smoothing: antialiased;
-	background: #2b3a42;
-}
-* {
-	box-sizing: border-box;
-}
 @keyframes flipY {
 	0% {
 		transform: translateX(-50%) scale3d(1, 1, 1) rotatex(0deg) rotatey(0deg) rotatez(0deg);
@@ -252,7 +243,6 @@ body {
    }
 }
 .container {
-	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -261,6 +251,7 @@ body {
 	width: 120px;
 	height: 120px;
 	margin-top: 120px;
+	margin-left: 39%;
 	transform-style: preserve-3d;
 	transform: translateX(40px) rotatex(-33.5deg) rotatey(45deg);
 }
