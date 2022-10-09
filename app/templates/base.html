@@ -14,12 +14,42 @@
 	  <nav>
 		<a href="#home" class="active">Home</a>
 		<a href="#about">About</a>
-		<a href="{{ url_for('script')}}">Find Rooms</a>
+		<a href="#services">Services</a>
+		<a href="#contact">Contact</a>
+		<a href="#script">Find Rooms</a>
 	  </nav>
 	</header>
 	<section id="home">
 	  <div class="container reveal">
-		<h1>Welcome To Room Matrix! &#8595;</h1>
+		<h1>Welcome To Room Matrix &#8595;</h1>
+		<div class="container">
+			<div class="scene">
+				<div class="webpack-cube">
+					<div class="outer-cube">
+						<div class="face face-top"></div>
+						<div class="face face-bottom"></div>
+						<div class="face face-left"></div>
+						<div class="face face-right"></div>
+						<div class="face face-front"></div>
+						<div class="face face-back"></div>
+					</div>
+					<div class="inner-cube">
+						<div class="face face-top"></div>
+						<div class="face face-bottom"></div>
+						<div class="face face-left"></div>
+						<div class="face face-right"></div>
+						<div class="face face-front"></div>
+						<div class="face face-back"></div>
+					</div>
+				</div>
+				<div class="shadows-outer-container">
+					<div class="shadow-outer"></div>
+					</div>
+				<div class="shadows-inner-container">
+					<div class="shadow-inner"></div>
+				</div>
+			</div>
+		</div>
 	  </div>
 	</section>
 	<section id="about">
@@ -97,7 +127,32 @@
 		  </div>
 		</div>
 	  </div>
-	</section>
+    </section>
+    
+    <section id="script">
+        <div class="container reveal">
+            <form action="" method='POST' name="myform">
+                {{ form.csrt_token }}
+                <p>Building</p>
+                <select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
+                <option value="{{buildings[0]}}" selected>{{buildings[0]}}</option>
+                {% for building in buildings[1:] %}
+                <option value="{{building}}">{{building}}</option>
+                {% endfor %}
+                </select>
+                {{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
+                <p>Start Time</p>
+                <input type="time" id="appt" name="appt1"
+                min="00:00" max="23:59" required>
+
+                <p>End Time</p>
+                <input type="time" id="appt" name="appt2"
+                min="00:00" max="23:59" required>
+                {{form.submit()}}
+                </p>
+            </form>
+        </div>
+    </section>
 
 	<script>
 
