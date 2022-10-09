@@ -10,18 +10,14 @@ import WebScrape
 import time
 import os, json
 
-@app.route('/')
-@app.route('/index')
-def index():
-	return render_template('index.html')
-
 
 class InfoForm(FlaskForm):
 	startdate = DateField('Start Date', format='%Y-%m-%d', validators=(validators.DataRequired(),))
 	submit = SubmitField('Submit')
 
-@app.route('/script', methods=('GET', 'POST'))
-def script():
+
+@app.route('/', methods=('GET', 'POST'))
+def base():
 	form = InfoForm()
 	buildings = ['BE', 'DL', 'CL', 'AA']
 	if form.validate_on_submit():
@@ -29,9 +25,8 @@ def script():
 		startT = request.form['appt1']
 		endT = request.form['appt2']
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
-		WebScrape.test(building, day, startT, endT)
-		return redirect(url_for('script'))
-	return render_template('script.html', form=form, buildings=buildings)
+		results = WebScrape.test(building, day, startT, endT)
+	return render_template('base.html', form=form, buildings=buildings)
 
 
 	

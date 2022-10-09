@@ -10,9 +10,199 @@
 </head>
 
 <body>
-	<div class="nav">
-		<a class="nav-item" href="">
-			<a href="{{ url_for('script')}}">Find Rooms</a>
-		</a>
-	</div>
+	<header>
+	  <nav>
+		<a href="#home" class="active">Home</a>
+		<a href="#about">About</a>
+		<a href="#services">Services</a>
+		<a href="#contact">Contact</a>
+		<a href="#script">Find Rooms</a>
+	  </nav>
+	</header>
+	<section id="home">
+	  <div class="container reveal">
+		<h1>Welcome To Room Matrix &#8595;</h1>
+		<div class="container">
+			<div class="scene">
+				<div class="webpack-cube">
+					<div class="outer-cube">
+						<div class="face face-top"></div>
+						<div class="face face-bottom"></div>
+						<div class="face face-left"></div>
+						<div class="face face-right"></div>
+						<div class="face face-front"></div>
+						<div class="face face-back"></div>
+					</div>
+					<div class="inner-cube">
+						<div class="face face-top"></div>
+						<div class="face face-bottom"></div>
+						<div class="face face-left"></div>
+						<div class="face face-right"></div>
+						<div class="face face-front"></div>
+						<div class="face face-back"></div>
+					</div>
+				</div>
+				<div class="shadows-outer-container">
+					<div class="shadow-outer"></div>
+					</div>
+				<div class="shadows-inner-container">
+					<div class="shadow-inner"></div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</section>
+	<section id="about">
+	  <div class="container reveal">
+		<h2>About</h2>
+		<div class="text-container">
+		  <div class="text-box">
+			<h3>What is Room Matrix?</h3>
+			<h4>
+				Room Matrix is an application made for college students trying to find available rooms or lecture halls to study in!</h4>
+				
+			<br>
+			<br>
+			<h4>	
+				Simply enter buildings, days, and times to figure out all rooms that are open. It's time to stop wasting time searching for places to study!
+					
+			</h4>
+			<br>
+			<br>
+			<h4>
+				Try it out down below!
+			</h4>
+			<br>
+		  </div>
+		</div>
+	  </div>
+	</section>
+  
+	<section id="services">
+	  <div class="container reveal">
+		<h2>Services</h2>
+		<div class="text-container">
+		  <div class="text-box">
+			<h3>Section text</h3>
+			<p>
+			  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+			  eius molestiae perferendis eos provident vitae iste.
+			</p>
+		  </div>
+		  <div class="text-box">
+			<h3>Section Text</h3>
+			<p>
+			  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+			  eius molestiae perferendis eos provident vitae iste.
+			</p>
+		  </div>
+		  <div class="text-box">
+			<h3>Section Text</h3>
+			<p>
+			  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+			  eius molestiae perferendis eos provident vitae iste.
+			</p>
+		  </div>
+		</div>
+	  </div>
+	</section>
+  
+	<section id="contact">
+	  <div class="container reveal">
+		<h2>Contact</h2>
+		<div class="text-container">
+		  <div class="text-box">
+			<h3>Section Text</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		  </div>
+		  <div class="text-box">
+			<h3>Section Text</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		  </div>
+		</div>
+	  </div>
+    </section>
+    
+    <section id="script">
+        <div class="container reveal">
+            <form action="" method='POST' name="myform">
+                {{ form.csrt_token }}
+                <p>Building</p>
+                <select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
+                <option value="{{buildings[0]}}" selected>{{buildings[0]}}</option>
+                {% for building in buildings[1:] %}
+                <option value="{{building}}">{{building}}</option>
+                {% endfor %}
+                </select>
+                {{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
+                <p>Start Time</p>
+                <input type="time" id="appt" name="appt1"
+                min="00:00" max="23:59" required>
+
+                <p>End Time</p>
+                <input type="time" id="appt" name="appt2"
+                min="00:00" max="23:59" required>
+                {{form.submit()}}
+                </p>
+            </form>
+        </div>
+    </section>
+
+	<script>
+
+		let section = document.querySelectorAll("section");
+		let menu = document.querySelectorAll("header nav a");
+
+		// sets section window attributes
+		window.onscroll = () => {
+			section.forEach((i) => {
+				let top = window.scrollY;
+				let offset = i.offsetTop - 150;
+				let height = i.offsetHeight;
+				let id = i.getAttribute("id");
+
+				// handles changing nav button from "active" status to non-active if not on that section of page
+				if (top >= offset && top < offset + height) {
+					menu.forEach((link) => {
+						link.classList.remove("active");
+						document
+						.querySelector("header nav a[href*=" + id + "]")
+						.classList.add("active");
+					});
+				}
+			});
+		};
+
+		function reveal() {
+			// everything in the section that is supposed to be hidden then gets revealed when scrolled to
+			var reveals = document.querySelectorAll(".reveal");
+			// for each section's revealing text, set the boudary for where the window has to reach in order for the text to be revealed
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 150;
+
+				// when the window passes the section area, reveal it, when the window y-axis, hide it. This way when the scroll passes the section it gets revealed, and doesn't get hidden until it scrolls back up past it
+				if (elementTop < windowHeight - elementVisible) {
+				reveals[i].classList.add("active");
+				} else {
+				reveals[i].classList.remove("active");
+				}
+			}
+		}
+
+		// event listener for scrolling
+		window.addEventListener("scroll", reveal);
+
+		// To check the scroll position on page load
+		reveal();
+
+	</script>
+
 </body>
