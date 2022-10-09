@@ -14,8 +14,6 @@
 	  <nav>
 		<a href="#home" class="active">Home</a>
 		<a href="#about">About</a>
-		<a href="#services">Services</a>
-		<a href="#contact">Contact</a>
 		<a href="#script">Find Rooms</a>
 	  </nav>
 	</header>
@@ -58,100 +56,76 @@
 		<div class="text-container">
 		  <div class="text-box">
 			<h3>What is Room Matrix?</h3>
-			<h4>
-				Room Matrix is an application made for college students trying to find available rooms or lecture halls to study in!</h4>
+			<p>
+				Room Matrix is an application made for college students trying to find available rooms or lecture halls to study in!</p>
 				
 			<br>
 			<br>
-			<h4>	
+			<p>	
 				Simply enter buildings, days, and times to figure out all rooms that are open. It's time to stop wasting time searching for places to study!
 					
-			</h4>
+			</p>
 			<br>
 			<br>
-			<h4>
+			<p>
 				Try it out down below!
-			</h4>
+			</p>
 			<br>
 		  </div>
 		</div>
 	  </div>
 	</section>
-  
-	<section id="services">
-	  <div class="container reveal">
-		<h2>Services</h2>
-		<div class="text-container">
-		  <div class="text-box">
-			<h3>Section text</h3>
-			<p>
-			  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-			  eius molestiae perferendis eos provident vitae iste.
-			</p>
-		  </div>
-		  <div class="text-box">
-			<h3>Section Text</h3>
-			<p>
-			  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-			  eius molestiae perferendis eos provident vitae iste.
-			</p>
-		  </div>
-		  <div class="text-box">
-			<h3>Section Text</h3>
-			<p>
-			  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-			  eius molestiae perferendis eos provident vitae iste.
-			</p>
-		  </div>
-		</div>
-	  </div>
-	</section>
-  
-	<section id="contact">
-	  <div class="container reveal">
-		<h2>Contact</h2>
-		<div class="text-container">
-		  <div class="text-box">
-			<h3>Section Text</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-		  </div>
-		  <div class="text-box">
-			<h3>Section Text</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-		  </div>
-		</div>
-	  </div>
-    </section>
     
     <section id="script">
         <div class="container reveal">
             <form action="" method='POST' name="myform">
                 {{ form.csrt_token }}
-                <p>Building</p>
-                <select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
-                <option value="{{buildings[0]}}" selected>{{buildings[0]}}</option>
-                {% for building in buildings[1:] %}
-                <option value="{{building}}">{{building}}</option>
-                {% endfor %}
-                </select>
-                {{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
-                <p>Start Time</p>
-                <input type="time" id="appt" name="appt1"
-                min="00:00" max="23:59" required>
-
-                <p>End Time</p>
-                <input type="time" id="appt" name="appt2"
-                min="00:00" max="23:59" required>
-                {{form.submit()}}
+                <div class="login-box">
+					<form>
+					  <div class="user-box">
+							<select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
+								<option value="" selected disabled hidden>Building</option>
+								<option value="{{buildings[0]}}" style="color:white;">{{buildings[0]}}</option>
+								{% for building in buildings[1:] %}
+								<option value="{{building}}" style="color:white;">{{building}}</option>
+								{% endfor %}
+							</select>
+					  </div>
+					  <div class="user-box date"> 
+						{{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}} 
+					  </div>
+					  <div class="user-box">
+							<label>Start Time</label>
+							<input type="time" id="appt" name="appt1" min="00:00" max="23:59" required>
+					  </div>
+					  <div class="user-box">
+							<label>End Time</label>
+							<input type="time" id="appt" name="appt2" min="00:00" max="23:59" required>
+					  </div>
+					  {{form.submit()}}
+					</form>
+				  </div>
+                
                 </p>
             </form>
         </div>
+		{% if results %}
+		{% block content %}
+		<article class="leaderboard">
+			<header>
+			  <h1 class="leaderboard__title"><span class="leaderboard__title--top">Available Rooms</span><span class="leaderboard__title--bottom"></span></h1>
+			</header>
+			
+			{% for result in results %}
+			  <article class="leaderboard__profile">
+				<span class="leaderboard__name">{{result}}</span>
+			  </article>
+			{% endfor %}
+		</article>
+			 
+	
+		{% endblock content %}
+		{% endif %}
     </section>
 
 	<script>
