@@ -16,7 +16,7 @@
 		<a href="#about">About</a>
 		<a href="#services">Services</a>
 		<a href="#contact">Contact</a>
-		<a href="{{ url_for('script')}}">Find Rooms</a>
+		<a href="#script">Find Rooms</a>
 	  </nav>
 	</header>
 	<section id="home">
@@ -105,7 +105,32 @@
 		  </div>
 		</div>
 	  </div>
-	</section>
+    </section>
+    
+    <section id="script">
+        <div class="container reveal">
+            <form action="" method='POST' name="myform">
+                {{ form.csrt_token }}
+                <p>Building</p>
+                <select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
+                <option value="{{buildings[0]}}" selected>{{buildings[0]}}</option>
+                {% for building in buildings[1:] %}
+                <option value="{{building}}">{{building}}</option>
+                {% endfor %}
+                </select>
+                {{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
+                <p>Start Time</p>
+                <input type="time" id="appt" name="appt1"
+                min="00:00" max="23:59" required>
+
+                <p>End Time</p>
+                <input type="time" id="appt" name="appt2"
+                min="00:00" max="23:59" required>
+                {{form.submit()}}
+                </p>
+            </form>
+        </div>
+    </section>
 
 	<script>
 
