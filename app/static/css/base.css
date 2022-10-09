@@ -387,3 +387,109 @@ section .text-container .text-box h3 {
 	transform-origin: center center;
 	transform: scale3d(0.4, 0.4, 0.4);
 }
+
+
+
+html {
+	height: 100%;
+  }
+  body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	background: linear-gradient(#141e30, #243b55);
+  }
+  
+  .login-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: #42455a;
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px #42455a;
+	border-radius: 10px;
+  }
+  
+  .login-box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+  }
+  
+  .login-box .user-box {
+	position: relative;
+	white-space: nowrap;
+  }
+  
+  .login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+  }
+  .login-box .user-box label {
+	position: absolute;
+	top:0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+  }
+  
+  .login-box .user-box select {
+	position: relative;
+	display: inline-block;
+	border: none;
+	padding: 10px 0;
+	font-size: 16px;
+	color: white;
+	background: #42455a;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 20px;
+	width: 320px;
+  }
+  
+  .login-box .user-box input[type="time"] {
+	text-align: right;
+	color:white;
+	filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1000%) contrast(1000%);
+  }
+
+  .login-box .user-box .datepicker {
+	text-align: right;
+	filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1000%) contrast(1000%);
+  }
+  
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #00c2cb;
+	font-size: 12px;
+  }
+  
+  .login-box input[type="submit"] {
+	padding: 10px 20px;
+  	font-size: 1rem;
+  	background: white;
+	color: #42455a;
+  }
+  
+  .login-box input[type="submit"]:hover {
+	font-size: 1.2rem;
+	transition: 0.5s ease-out;
+  }
+  
+  
