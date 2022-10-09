@@ -9,6 +9,8 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 import WebScrape
 import time
 import os, json
+import socket
+import requests
 
 
 class InfoForm(FlaskForm):
@@ -20,13 +22,18 @@ class InfoForm(FlaskForm):
 def base():
 	form = InfoForm()
 	buildings = ['BE', 'DL', 'CL', 'AA']
+	response = requests.get('http://ipinfo.io/loc')
+	lat, lng = response.content.decode("utf-8").split(",")
+
+	print(lng[:len(lng)-1])
+	
 	if form.validate_on_submit():
 		building = request.form['building']
 		startT = request.form['appt1']
 		endT = request.form['appt2']
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
 		results = WebScrape.test(building, day, startT, endT)
-	return render_template('base.html', form=form, buildings=buildings)
+	return render_template('base.html', form=form, buildings=buildings, lat=lat, lng=lng[:len(lng)-1])
 
 
 	
