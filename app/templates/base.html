@@ -77,12 +77,10 @@
 	</section>
     
     <section id="script">
-		{% block content %}
-		{% if not results %}
         <div class="container reveal">
             <form action="" method='POST' name="myform">
                 {{ form.csrt_token }}
-                <div class="login-box">
+                <div id="box" class="login-box">
 					<form>
 					  <div class="user-box">
 							<select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
@@ -111,10 +109,12 @@
                 </p>
             </form>
         </div>
-		{% else %}
+
+		{% if results %}
+		{% block content %}
 		<article class="leaderboard">
 			<header>
-			  <h1 class="leaderboard__title"><span class="leaderboard__title--top">Available Rooms</span><span class="leaderboard__title--bottom"></span></h1>
+			  <h1 class="leaderboard__title"><span class="leaderboard__title--top">Available Rooms in {{buildingName}}</span><span class="leaderboard__title--bottom"></span></h1>
 			</header>
 			
 			{% for result in results %}
@@ -125,8 +125,8 @@
 		</article>
 			 
 	
-		{% endif %}
 		{% endblock content %}
+		{% endif %}
     </section>
 
 	<script>
@@ -175,6 +175,12 @@
 		// event listener for scrolling
 		window.addEventListener("scroll", reveal);
 
+
+		/*var myButton = document.getElementById("submit");
+		var myDiv = document.getElementById("box");
+		myButton.addEventListener("click", ()=>{
+			myDiv.classList.add("foo");
+		});*/
 		// To check the scroll position on page load
 		reveal();
 

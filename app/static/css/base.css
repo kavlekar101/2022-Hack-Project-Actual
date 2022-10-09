@@ -411,6 +411,8 @@ section .text-container .text-box p {
 	max-width: 490px;
 	width: 100%;
 	border-radius: 12px;
+	position: absolute;
+	right: 20px;
 }
 .leaderboard header {
 	--start: 15%;
@@ -609,4 +611,8 @@ html {
 	transition: 0.5s ease-out;
   }
   
+  .foo {
+	position: absolute;
+	left: -250px;
+  }
   
