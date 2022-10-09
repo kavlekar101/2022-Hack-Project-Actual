@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, redirect, url_for, render_template, session
+from flask import Flask, redirect, url_for, render_template, session, jsonify
 from flask_wtf import FlaskForm
 from wtforms.fields import DateField
 from wtforms.validators import DataRequired
@@ -8,6 +8,7 @@ from flask import render_template
 from flask import Flask, render_template, request, url_for, flash, redirect
 import WebScrape
 import time
+import os, json
 
 
 class InfoForm(FlaskForm):
