@@ -27,7 +27,8 @@ def base():
 		endT = request.form['appt2']
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
 		results = WebScrape.test(building, day, startT, endT)
-		
+	
+	#results ["BE0000", "BE0120", "BE0248"]
 	return render_template('base.html', form=form, buildings=buildings, results=results)
 
 
