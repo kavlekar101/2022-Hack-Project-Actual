@@ -8,9 +8,21 @@
   font-family: "Asap", sans-serif;
   scroll-behavior: smooth;
 }
-h4{
-  font-size: large;
+@keyframes bobble {
+  0% {
+      transform: translateY(10px);
+  }
+  50% {
+      transform: translateY(30px);
+  }
+  100% {
+      transform: translateY(10px);
+  }
 }
+#about {
+animation: bobble 2s infinite;
+}
+
 a {
   text-decoration: none;
 }
@@ -85,17 +97,23 @@ section h2 {
 }
 section .text-container {
   display: flex;
+  
 }
 section .text-container .text-box {
   margin: 20px;
   padding: 20px;
   background: #00c2cb;
+  border-radius: 25px;
 }
 section .text-container .text-box h3 {
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+section .text-container .text-box p {
+  font-size: 20px;
+  text-align: center;
 }
 
 @media (max-width: 900px) {

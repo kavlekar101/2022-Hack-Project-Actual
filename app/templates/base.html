@@ -56,20 +56,20 @@
 		<div class="text-container">
 		  <div class="text-box">
 			<h3>What is Room Matrix?</h3>
-			<h4>
-				Room Matrix is an application made for college students trying to find available rooms or lecture halls to study in!</h4>
+			<p>
+				Room Matrix is an application made for college students trying to find available rooms or lecture halls to study in!</p>
 				
 			<br>
 			<br>
-			<h4>	
+			<p>	
 				Simply enter buildings, days, and times to figure out all rooms that are open. It's time to stop wasting time searching for places to study!
 					
-			</h4>
+			</p>
 			<br>
 			<br>
-			<h4>
+			<p>
 				Try it out down below!
-			</h4>
+			</p>
 			<br>
 		  </div>
 		</div>
@@ -87,11 +87,11 @@
                 <option value="{{building}}">{{building}}</option>
                 {% endfor %}
                 </select>
-                {{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
+				<p>Day</p>
+				<input type="date" id="day" name="day">
                 <p>Start Time</p>
                 <input type="time" id="appt" name="appt1"
                 min="00:00" max="23:59" required>
-
                 <p>End Time</p>
                 <input type="time" id="appt" name="appt2"
                 min="00:00" max="23:59" required>
