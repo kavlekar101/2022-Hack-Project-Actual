@@ -87,8 +87,7 @@
                 <option value="{{building}}">{{building}}</option>
                 {% endfor %}
                 </select>
-				<p>Day</p>
-				<input type="date" id="day" name="day">
+				{{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
                 <p>Start Time</p>
                 <input type="time" id="appt" name="appt1"
                 min="00:00" max="23:59" required>
@@ -96,9 +95,25 @@
                 <input type="time" id="appt" name="appt2"
                 min="00:00" max="23:59" required>
                 {{form.submit()}}
-                </p>
             </form>
         </div>
+		{% if results %}
+		{% block content %}
+		<article class="leaderboard">
+			<header>
+			  <h1 class="leaderboard__title"><span class="leaderboard__title--top">Available Rooms</span><span class="leaderboard__title--bottom"></span></h1>
+			</header>
+			
+			{% for result in results %}
+			  <article class="leaderboard__profile">
+				<span class="leaderboard__name">{{result}}</span>
+			  </article>
+			{% endfor %}
+		</article>
+			 
+	
+		{% endblock content %}
+		{% endif %}
     </section>
 
 	<script>

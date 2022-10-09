@@ -18,16 +18,16 @@ class InfoForm(FlaskForm):
 @app.route('/', methods=('GET', 'POST'))
 def base():
 	form = InfoForm()
+	results = []
 	buildings = ['BE', 'DL', 'CL', 'AA']
 	if form.validate_on_submit():
 		building = request.form['building']
 		startT = request.form['appt1']
 		endT = request.form['appt2']
-		day = request.form['day']
-		print(day)
+		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
 		results = WebScrape.test(building, day, startT, endT)
-
-	return render_template('base.html', form=form, buildings=buildings)
+		
+	return render_template('base.html', form=form, buildings=buildings, results=results)
 
 
 	
