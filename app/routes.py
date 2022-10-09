@@ -28,6 +28,7 @@ def base():
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
 		results = WebScrape.test(building, day, startT, endT)
 		
+		
 	return render_template('base.html', form=form, buildings=buildings, results=results)
 
 

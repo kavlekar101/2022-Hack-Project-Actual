@@ -77,6 +77,8 @@
 	</section>
     
     <section id="script">
+		{% block content %}
+		{% if not results %}
         <div class="container reveal">
             <form action="" method='POST' name="myform">
                 {{ form.csrt_token }}
@@ -109,8 +111,7 @@
                 </p>
             </form>
         </div>
-		{% if results %}
-		{% block content %}
+		{% else %}
 		<article class="leaderboard">
 			<header>
 			  <h1 class="leaderboard__title"><span class="leaderboard__title--top">Available Rooms</span><span class="leaderboard__title--bottom"></span></h1>
@@ -124,8 +125,8 @@
 		</article>
 			 
 	
-		{% endblock content %}
 		{% endif %}
+		{% endblock content %}
     </section>
 
 	<script>
