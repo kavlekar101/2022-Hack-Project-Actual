@@ -21,6 +21,7 @@ class InfoForm(FlaskForm):
 @app.route('/', methods=('GET', 'POST'))
 def base():
 	form = InfoForm()
+	results = []
 	buildings = ['BE', 'DL', 'CL', 'AA']
 	response = requests.get('http://ipinfo.io/loc')
 	lat, lng = response.content.decode("utf-8").split(",")
