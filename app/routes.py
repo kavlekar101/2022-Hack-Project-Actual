@@ -3,8 +3,8 @@ from flask import Flask, redirect, url_for, render_template, session, jsonify
 from flask_wtf import FlaskForm
 from wtforms.fields import DateField
 from wtforms.validators import DataRequired
-from wtforms import validators, SubmitField
-from flask import render_template
+from wtforms import validators, SubmitField, TextAreaField
+from flask import render_template, Response
 from flask import Flask, render_template, request, url_for, flash, redirect
 import WebScrape
 import time

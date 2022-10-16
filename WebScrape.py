@@ -24,11 +24,10 @@ class Scraper:
         self.startT = startT
         self.endT = endT
         chrome_options = webdriver.ChromeOptions()
-        #chrome_options.add_argument("--headless")
-        #chrome_options.set_capability("desired_capabilities", webdriver.DesiredCapabilities.HTMLUNIT)
-        #self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
-        self.driver = webdriver.Remote(options=chrome_options)
-        print("hello")
+        chrome_options.add_argument("--headless")
+        # chrome_options.set_capability("desired_capabilities", webdriver.DesiredCapabilities.HTMLUNIT)
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+        # self.driver = webdriver.Remote(options=chrome_options)
     
     def start(self):
         self.driver.get("https://courses.osu.edu/psp/csosuct/EMPLOYEE/PUB/c/OSR_CUSTOM_MENU.OSR_ROOM_MATRIX.GBL?")
@@ -224,8 +223,6 @@ def test(building, day, startT, endT):
             availRooms.append(r)
     s.quit()
     return availRooms
-
-print(test("BE","10/17/2022","09:00AM","09:00PM"))
 
 # have to get to the frame with all of the textboxes so that I can enter the stuff
 # so first switch back to the original frame, then I can switch to the frame holding all the text input frames

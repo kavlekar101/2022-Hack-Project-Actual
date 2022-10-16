@@ -24,7 +24,15 @@
 				map: map,
 			});
 		}
-    </script>
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+    </script>  
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+    </script>  
+    
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" type="text/css" />  
     {% block head %}{% endblock %}
 </head>
 
@@ -103,13 +111,19 @@
                 <div class="login-box">
 					<form>
 					  <div class="user-box">
-							<select name="building" method="GET" action="/" value="{{ request.form['building'] }}">
-								<option value="" selected disabled hidden>Building</option>
-								<option value="{{buildings[0]}}" style="color:white;">{{buildings[0]}}</option>
-								{% for building in buildings[1:] %}
-								<option value="{{building}}" style="color:white;">{{building}}</option>
-								{% endfor %}
-							</select>
+							<input type="text" id="buildingnames">
+							<script>
+								$( function() {
+									var availableTags = [
+										{% for building in buildings %}
+											"{{building}}",
+										{% endfor %}
+									];
+									$( "#buildingnames" ).autocomplete({
+									source: availableTags
+									});
+								} );
+							</script>
 					  </div>
 					  <div class="user-box date"> 
 						{{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}} 
