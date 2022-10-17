@@ -22,54 +22,6 @@ class InfoForm(FlaskForm):
 def base():
 	form = InfoForm()
 	results = []
-	buildings = [
-		"209 West Eighteenth Avenue", 
-		"Agricultural Administration", 
-		"Agricultural Engineering Building", 
-		"Animal Science Building", 
-		"Arps Hall", 
-		"Baker Systems Engineering", 
-		"Biological Science Building", 
-		"Bolz Hall", 
-		"Caldwell Laboratory", 
-		"Campbell Hall", 
-		"CBEC", 
-		"Cockins Hall", 
-		"Cunz Hall", 
-		"Denney Hall", 
-		"Derby Hall", 
-		"Dreese Laboratories", 
-		"Dulles Hall", 
-		"Enarson Classroom Building", 
-		"Evans Laboratory", 
-		"Fontana Laboratories", 
-		"Hagerty Hall", 
-		"Hayes Hall", 
-		"Hitchcock Hall", 
-		"Hopkins Hall", 
-		"Independence Hall", 
-		"Jennings Hall", 
-		"Journalism Building", 
-		"Knowlton Hall", 
-		"Kottman Hall", 
-		"Lazenby Hall", 
-		"McPherson Chemical Laboratory", 
-		"Mendenhall Lab", 
-		"Orton Hall", 
-		"Page Hall", 
-		"Parks Hall", 
-		"Physical Activity and Education Services - PAES", 
-		"Pomerene Hall", 
-		"Psychology Building", 
-		"Ramseyer Hall", 
-		"Schoenbaum Hall", 
-		"Scott Laboratory", 
-		"Smith Laboratory", 
-		"Stillman Hall", 
-		"Sullivant Hall", 
-		"Townshend Hall", 
-		"University Hall", 
-	]
 	buildingMap = {'Agricultural Administration': 'AA', 
 				'Agricultural Engineering Building': 'AE', 
 				'Animal Science Building': 'AS', 
@@ -124,7 +76,7 @@ def base():
 		endT = request.form['appt2']
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
 		results = WebScrape.test(building, day, startT, endT)
-	return render_template('base.html', form=form, buildings=buildings, lat=lat, lng=lng[:len(lng)-1])
+	return render_template('base.html', form=form, buildings=buildingMap.keys(), lat=lat, lng=lng[:len(lng)-1])
 
 
 	
