@@ -22,14 +22,104 @@ class InfoForm(FlaskForm):
 def base():
 	form = InfoForm()
 	results = []
-	buildings = ['BE', 'DL', 'CL', 'AA']
+	buildings = [
+		"209 West Eighteenth Avenue", 
+		"Agricultural Administration", 
+		"Agricultural Engineering Building", 
+		"Animal Science Building", 
+		"Arps Hall", 
+		"Baker Systems Engineering", 
+		"Biological Science Building", 
+		"Bolz Hall", 
+		"Caldwell Laboratory", 
+		"Campbell Hall", 
+		"CBEC", 
+		"Cockins Hall", 
+		"Cunz Hall", 
+		"Denney Hall", 
+		"Derby Hall", 
+		"Dreese Laboratories", 
+		"Dulles Hall", 
+		"Enarson Classroom Building", 
+		"Evans Laboratory", 
+		"Fontana Laboratories", 
+		"Hagerty Hall", 
+		"Hayes Hall", 
+		"Hitchcock Hall", 
+		"Hopkins Hall", 
+		"Independence Hall", 
+		"Jennings Hall", 
+		"Journalism Building", 
+		"Knowlton Hall", 
+		"Kottman Hall", 
+		"Lazenby Hall", 
+		"McPherson Chemical Laboratory", 
+		"Mendenhall Lab", 
+		"Orton Hall", 
+		"Page Hall", 
+		"Parks Hall", 
+		"Physical Activity and Education Services - PAES", 
+		"Pomerene Hall", 
+		"Psychology Building", 
+		"Ramseyer Hall", 
+		"Schoenbaum Hall", 
+		"Scott Laboratory", 
+		"Smith Laboratory", 
+		"Stillman Hall", 
+		"Sullivant Hall", 
+		"Townshend Hall", 
+		"University Hall", 
+	]
+	buildingMap = {'Agricultural Administration': 'AA', 
+				'Agricultural Engineering Building': 'AE', 
+				'Animal Science Building': 'AS', 
+				'Arps Hall': 'AP', 
+				'Baker Systems Engineering': 'BE', 
+				'Bolz Hall': 'BO', 
+				'Caldwell Laboratory': 'CL', 
+				'Campbell Hall': 'CM', 'CBEC': 
+				'CB', 
+				'Cockins Hall': 'CH', 
+				'Cunz Hall': 'CZ', 
+				'Denney Hall': 'DE', 
+				'Derby Hall': 'DB', 
+				'Dreese Laboratories': 'DL', 
+				'Dulles Hall': 'DU', 
+				'Enarson Classroom Building': 'EC', 
+				'Evans Laboratory': 'EL', 
+				'Fontana Laboratories': 'FL', 
+				'Hagerty Hall': 'HH', 
+				'Hayes Hall': 'HA', 
+				'Hitchcock Hall': 'HI', 
+				'Hopkins Hall': 'HC', 
+				'Independence Hall': 'IH', 
+				'Jennings Hall': 'JE', 
+				'Journalism Building': 'JR', 
+				'Knowlton Hall': 'KN', 
+				'Kottman Hall': 'KH', 
+				'Lazenby Hall': 'LZ', 
+				'McPherson Chemical Laboratory': 'MP', 
+				'Orton Hall': 'OR', 
+				'Page Hall': 'PA', 
+				'Parks Hall': 'PK', 
+				'Physical Activity and Education Services - PAES': 'PE', 
+				'Pomerene Hall': 'PO', 
+				'Psychology Building': 'PS', 
+				'Ramseyer Hall': 'RA', 
+				'Schoenbaum Hall': 'SB', 
+				'Scott Laboratory': 'SO', 
+				'Smith Laboratory': 'SM', 
+				'Stillman Hall': 'SH', 
+				'Sullivant Hall': 'SU', 
+				'Townshend Hall': 'TO', 
+				'University Hall': 'UH'}
 	response = requests.get('http://ipinfo.io/loc')
 	lat, lng = response.content.decode("utf-8").split(",")
 
-	print(lng[:len(lng)-1])
+	# print(lng[:len(lng)-1])
 	
 	if form.validate_on_submit():
-		building = request.form['building']
+		building = buildingMap[request.form['buildingnames']]
 		startT = request.form['appt1']
 		endT = request.form['appt2']
 		day = str(form.startdate.data.month) + "/" + str(form.startdate.data.day) + "/" + str(form.startdate.data.year)
