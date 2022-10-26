@@ -11,7 +11,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
 
 # this is the most important
 # I need to switch frames I think https://stackoverflow.com/questions/48895434/selecting-item-in-nested-html-frame-with-selenium-webdriver

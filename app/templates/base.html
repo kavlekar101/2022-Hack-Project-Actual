@@ -164,11 +164,9 @@
 
     <section id="location">
         <div class="container reveal">
-			<div id="map" style="width=100%; height=900px;"></div>
-			<script
-      			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      			defer
-    		></script>
+			<div id="map" style="width=100%; height=900px;">
+				<iframe src={{ url }} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
         </div>
     </section>
 
