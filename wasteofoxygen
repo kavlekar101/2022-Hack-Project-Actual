@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PAGE id='OSR_ROOM_MATRIX'><GENSCRIPT id='script'><![CDATA[var oWin=window;
+ var oDoc = window.document;
+oWin.strCurrUrl='https://courses.osu.edu/psc/csosuct/EMPLOYEE/PUB/c/OSR_CUSTOM_MENU.OSR_ROOM_MATRIX.GBL/post?ICAJAX=1&ICNAVTYPEDROPDOWN=0&ICType=Panel&ICElementNum=0&ICStateNum=2&ICAction=DERIVED_CLASS_S_SSR_REFRESH_CAL&ICModelCancel=0&ICXPos=0&ICYPos=0&ResponsetoDiffFrame=-1&TargetFrameName=None&FacetPath=None&ICFocus=&ICSaveWarningFilter=0&ICChanged=-1&ICSkipPending=0&ICAutoSave=0&ICResubmit=0&ICSID=qH%252BToGHdCMZnvER7Bj%252F4YYhVF9igunI9P2fEVDO%252FYxM%253D&ICActionPrompt=false&ICBcDomData=UnknownValue&ICPanelName=&ICFind=&ICAddCount=&ICAppClsData=&OSR_DERIVED_RM_FACILITY_ID=BE0128&DERIVED_CLASS_S_START_DT=11%252F14%252F2022&DERIVED_CLASS_S_MEETING_TIME_START=8%253A00AM&DERIVED_CLASS_S_MEETING_TIME_END=10%253A00PM&OSR_DERIVED_RM_START_DT=11%252F14%252F2022&OSR_DERIVED_RM_END_DT=11%252F14%252F2022&DERIVED_CLASS_S_MONDAY_LBL$30$$chk=Y&DERIVED_CLASS_S_MONDAY_LBL$30$=Y&DERIVED_CLASS_S_THURSDAY_LBL$chk=Y&DERIVED_CLASS_S_THURSDAY_LBL=Y&DERIVED_CLASS_S_SUNDAY_LBL$chk=Y&DERIVED_CLASS_S_SUNDAY_LBL=Y&DERIVED_CLASS_S_TUESDAY_LBL$chk=Y&DERIVED_CLASS_S_TUESDAY_LBL=Y&DERIVED_CLASS_S_FRIDAY_LBL$chk=Y&DERIVED_CLASS_S_FRIDAY_LBL=Y&DERIVED_CLASS_S_SHOW_AM_PM$chk=Y&DERIVED_CLASS_S_SHOW_AM_PM=Y&OSR_DERIVED_RM_OSR_SHOW_ROOM$chk=Y&OSR_DERIVED_RM_OSR_SHOW_ROOM=Y&DERIVED_CLASS_S_WEDNESDAY_LBL$chk=Y&DERIVED_CLASS_S_WEDNESDAY_LBL=Y&DERIVED_CLASS_S_SATURDAY_LBL$chk=Y&DERIVED_CLASS_S_SATURDAY_LBL=Y&DERIVED_CLASS_S_SSR_DISP_TITLE$chk=N&OSR_DERIVED_RM_OSR_SHOW_EVENTS$chk=Y&OSR_DERIVED_RM_OSR_SHOW_EVENTS=Y';
+oWin.strReqURL='';
+bPTActEnterKey = false;
+]]></GENSCRIPT><GENSCRIPT id='script'><![CDATA[oWin.gridRowSelRgbColor_win0 ='rgb(212,219,217)';
+]]></GENSCRIPT><GENJS id='script'><![CDATA[this.arrSrcScriptApp = ['/cs/csosuct/cache85909/PT_CALENDARSCRIPT1_MIN_1.js','/cs/csosuct/cache85909/PT_CALENDARSCRIPT_win0_MIN_1.js'];
+]]></GENJS><GENSCRIPT id='onloadScript'><![CDATA[var liveRegion = document.getElementById('pt_liveregion');
+if (liveRegion) liveRegion.innerHTML = '';
+
+ g_bAccessibilityMode=false;
+var actn='';
+var oWin=window;
+var oDoc=document;
+actn=oDoc.win0.ICAction.value;
+oDoc.win0.ICAction.value='None';
+oDoc.win0.ICResubmit.value='0';
+oWin.nResubmit='0';
+oDoc.win0.ICStateNum.value=3;initVars_win0();
+if (typeof resetVars_win0 == "function")resetVars_win0();
+oDoc.win0.ICFocus.value='';
+setupTimeout2();
+if (!isCrossDomainTop()) top.document.title=document.title;
+ptEvent.add(window,'scroll',positionWAIT_win0);
+ptCommonObj2.generateABNSearchResults(document.win0);
+getGblSrchPageNum(actn);
+if (gSrchRsltPageNum <= 5) getAllRelatedActions();
+
+if (typeof(myAppsWindowOpenJS) != 'undefined' && myAppsWindowOpenJS != null && myAppsWindowOpenJS != '')
+ {
+try {eval(myAppsWindowOpenJS);} catch(e) {}
+  myAppsWindowOpenJS=null;
+}
+
+if (typeof(ptLongEditCounter) != 'undefined' && ptLongEditCounter != null)
+   ptLongEditCounter.onLoadLongEditCounter();
+ResetGlyph_win0();
+self.scroll(0,0);
+if (typeof ptGridObj_win0 != 'undefined' && ptGridObj_win0)
+ ptGridObj_win0.clearGridArr();
+objToBeFocus = null;
+if (bPTDrag) CancelDragAccessible();
+ bPTDrag = false;
+LoadCalendar();
+if (typeof oWin == 'undefined') setEventHandlers_win0('ICFirstAnchor_win0', 'ICLastAnchor_win0', false);
+ else
+ oWin.setEventHandlers_win0('ICFirstAnchor_win0', 'ICLastAnchor_win0', false);
+setFocus_win0('DERIVED_CLASS_S_SSR_REFRESH_CAL',-1);
+ptLoadingStatus_empty(0);
+setupTimeout2();
+processing_win0(0,3000);]]></GENSCRIPT>
+<FIELD id='win0divPSPAGECONTAINER'><![CDATA[<table role='presentation'  border='0' id='ACE_width' cellpadding='0' cellspacing='0' class='PSPAGECONTAINER' cols='7' width='775'>
+<tr>
+<td width='0' height='12'></td>
+<td width='4'></td>
+<td width='285'></td>
+<td width='467'></td>
+<td width='4'></td>
+<td width='8'></td>
+<td width='7'></td>
+</tr>
+<tr>
+<td height='9' colspan='2'></td>
+<td rowspan='2'  valign='top' align='left'>
+<DIV  id='win0divDERIVED_CLASS_S_WEEKLY_SCHED_LABELlbl'><span  class='PAPAGETITLE' >Room Matrix</span></DIV></td>
+</tr>
+<tr>
+<td height='18' colspan='2'></td>
+<td colspan='4'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_WEEKLY_SCHED_LABEL'><span  class='PSEDITBOX_DISPONLY' id='DERIVED_CLASS_S_WEEKLY_SCHED_LABEL' >&nbsp;</span><!-- DERIVED_CLASS_S_WEEKLY_SCHED_LABEL -->
+</DIV></td>
+</tr>
+<tr>
+<td height='100'></td>
+<td colspan='3'  valign='top' align='left'>
+<DIV    id='win0divOSR_DERIVED_RM_'><table cellpadding='2' cellspacing='0' cols='1'  class='PSGROUPBOXWBO'  width='755'>
+<tr><td class='PSGROUPBOXLABEL'  align='left'>Search Options</td></tr>
+<tr><td width='753'>
+<table role='presentation'  border='0' id='ACE_OSR_DERIVED_RM_' cellpadding='0' cellspacing='0' cols='17' width='753' class='PSGROUPBOX' style='border-style:none' >
+<tr>
+<td width='3' height='5'></td>
+<td width='4'></td>
+<td width='16'></td>
+<td width='20'></td>
+<td width='48'></td>
+<td width='76'></td>
+<td width='28'></td>
+<td width='4'></td>
+<td width='1'></td>
+<td width='59'></td>
+<td width='28'></td>
+<td width='36'></td>
+<td width='56'></td>
+<td width='72'></td>
+<td width='4'></td>
+<td width='132'></td>
+<td width='166'></td>
+</tr>
+<tr>
+<td height='4' colspan='5'></td>
+<td colspan='4' rowspan='4' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divOSR_DERIVED_RM_FACILITY_ID'><input type='text' name='OSR_DERIVED_RM_FACILITY_ID' id='OSR_DERIVED_RM_FACILITY_ID' tabindex='-1' value="BE0128"  class='PSEDITBOX' style='width:70px; ' maxlength='10'  /><a class='PSHYPERLINK' name='OSR_DERIVED_RM_FACILITY_ID$prompt' id='OSR_DERIVED_RM_FACILITY_ID$prompt' role='button' aria-labelledby='OSR_DERIVED_RM_FACILITY_ID$prompt$img'tabindex='-1' href="javascript:pAction_win0(document.win0,'OSR_DERIVED_RM_FACILITY_ID$prompt');"><img src="/cs/csosuct/cache85909/PT_PROMPT_LOOKUP_1.gif" alt='Look up Facility ID' title='Look up Facility ID' id='OSR_DERIVED_RM_FACILITY_ID$prompt$img' name='OSR_DERIVED_RM_FACILITY_ID$prompt$img' border='0' align='absmiddle' style='vertical-align:middle;' /></a>
+</DIV></td>
+</tr>
+<tr>
+<td height='1' colspan='3'></td>
+<td colspan='2' rowspan='3'  valign='top' align='left'>
+<DIV  id='win0divOSR_DERIVED_RM_FACILITY_IDlbl'><label for='OSR_DERIVED_RM_FACILITY_ID' id='OSR_DERIVED_RM_FACILITY_ID_LBL' class='SSSTEXTTURQBOLD' >Facility ID</label></DIV></td>
+</tr>
+<tr>
+<td height='18' colspan='3'></td>
+<td colspan='8'  valign='top' align='left'>
+<DIV    id='win0divFACILITY_TBL_DESCRSHORT'><span  class='PSEDITBOX_DISPONLY' id='FACILITY_TBL_DESCRSHORT' >BE 128</span><!-- FACILITY_TBL_DESCRSHORT -->
+</DIV></td>
+</tr>
+<tr>
+<td height='5' colspan='3'></td>
+<td colspan='6'></td>
+<td rowspan='2'  valign='top' align='left'>
+<DIV    id='win0div$ICField59'><table cellpadding='2' cellspacing='0' cols='1'  class='PABACKGROUNDINVISIBLEWBO'  width='131'>
+<tr><td width='129'>
+<table role='presentation'  border='0' id='ACE_$ICField59' cellpadding='0' cellspacing='0' cols='2' width='129' class='PABACKGROUNDINVISIBLE' style='border-style:none' >
+<tr>
+<td width='3' height='9'></td>
+<td width='126'></td>
+</tr>
+<tr>
+<td height='13'></td>
+<td  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SSR_REFRESH_CAL'><span id='DERIVED_CLASS_S_SSR_REFRESH_CAL$span'  class='SSSBUTTON_CONFIRMLINK' ><a name='DERIVED_CLASS_S_SSR_REFRESH_CAL' id='DERIVED_CLASS_S_SSR_REFRESH_CAL'  ptlinktgt='pt_peoplecode' tabindex='-1' onclick='javascript:cancelBubble(event);' href="javascript:submitAction_win0(document.win0,'DERIVED_CLASS_S_SSR_REFRESH_CAL');"  class='SSSBUTTON_CONFIRMLINK' >Refresh Calendar</a></span><!-- DERIVED_CLASS_S_SSR_REFRESH_CAL --></DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='19'></td>
+<td colspan='4' rowspan='3'  valign='top' align='left'>
+<DIV  id='win0divDERIVED_CLASS_S_START_DTlbl'><label for='DERIVED_CLASS_S_START_DT' id='DERIVED_CLASS_S_START_DT_LBL' class='SSSTEXTTURQBOLD' >Show Week of</label></DIV></td>
+<td colspan='2' rowspan='3' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_START_DT'><input type='text' name='DERIVED_CLASS_S_START_DT' id='DERIVED_CLASS_S_START_DT' tabindex='-1' value="11/14/2022"  class='PSEDITBOX' style='width:72px; ' maxlength='10' onchange="addchg_win0(this);return doEdits_win0(this,'DMDY/450','N','N','N','N','N','N',0);" onkeyup="if (isPromptKey(event))DatePrompt_win0('DERIVED_CLASS_S_START_DT','DERIVED_CLASS_S_START_DT','450',false);return false;" /><a class='PSHYPERLINK' name='DERIVED_CLASS_S_START_DT$prompt' id='DERIVED_CLASS_S_START_DT$prompt' role='button' aria-labelledby='DERIVED_CLASS_S_START_DT$prompt$img'tabindex='-1' onfocus='doFocus_win0(this,true,false);' href="javascript:DatePrompt_win0('DERIVED_CLASS_S_START_DT','DERIVED_CLASS_S_START_DT$prompt','450',false);"><img src="/cs/csosuct/cache85909/PT_CALENDAR_1.gif" alt='Calendar Show Week of' title='Calendar Show Week of' id='DERIVED_CLASS_S_START_DT$prompt$img' name='DERIVED_CLASS_S_START_DT$prompt$img' border='0' align='absmiddle' style='vertical-align:middle;' /></a>
+</DIV></td>
+<td colspan='3' rowspan='3'  valign='top' align='left'>
+<DIV  id='win0divDERIVED_CLASS_S_MEETING_TIME_STARTlbl'><label for='DERIVED_CLASS_S_MEETING_TIME_START' id='DERIVED_CLASS_S_MEETING_TIME_START_LBL' class='SSSTEXTTURQBOLD' >Start Time</label></DIV></td>
+<td colspan='2' rowspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_MEETING_TIME_START'><input type='text' name='DERIVED_CLASS_S_MEETING_TIME_START' id='DERIVED_CLASS_S_MEETING_TIME_START' tabindex='-1' value="8:00AM"  class='PSEDITBOX' style='width:45px; ' maxlength='7' onchange="addchg_win0(this);return doEdits_win0(this,'TPM;AM','N','N','N','N','N','N',0);"  />
+</DIV></td>
+<td rowspan='2'  valign='top' align='left'>
+<DIV  id='win0divDERIVED_CLASS_S_MEETING_TIME_ENDlbl'><label for='DERIVED_CLASS_S_MEETING_TIME_END' id='DERIVED_CLASS_S_MEETING_TIME_END_LBL' class='SSSTEXTTURQBOLD' >End Time</label></DIV></td>
+<td colspan='2' rowspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_MEETING_TIME_END'><input type='text' name='DERIVED_CLASS_S_MEETING_TIME_END' id='DERIVED_CLASS_S_MEETING_TIME_END' tabindex='-1' value="10:00PM"  class='PSEDITBOX' style='width:45px; ' maxlength='7' onchange="addchg_win0(this);return doEdits_win0(this,'TPM;AM','N','N','N','N','N','N',0);"  />
+</DIV></td>
+</tr>
+<tr>
+<td height='4'></td>
+</tr>
+<tr>
+<td height='5'></td>
+<td></td>
+<td colspan='3' rowspan='2'  valign='top' align='left'>
+<DIV    id='win0div$ICField61'><table cellpadding='2' cellspacing='0' cols='1'  class='PABACKGROUNDINVISIBLEWBO'  width='163'>
+<tr><td width='161'>
+<table role='presentation'  border='0' id='ACE_$ICField61' cellpadding='0' cellspacing='0' cols='2' width='161' class='PABACKGROUNDINVISIBLE' style='border-style:none' >
+<tr>
+<td width='23' height='5'></td>
+<td width='138'></td>
+</tr>
+<tr>
+<td height='13'></td>
+<td  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SSR_PREV_WEEK'><span id='DERIVED_CLASS_S_SSR_PREV_WEEK$span'  class='SSSBUTTON_CANCELLINK' ><a name='DERIVED_CLASS_S_SSR_PREV_WEEK' id='DERIVED_CLASS_S_SSR_PREV_WEEK'  ptlinktgt='pt_peoplecode' tabindex='-1' onclick='javascript:cancelBubble(event);' href="javascript:submitAction_win0(document.win0,'DERIVED_CLASS_S_SSR_PREV_WEEK');"  class='SSSBUTTON_CANCELLINK' >&lt;&lt; Previous Week</a></span><!-- DERIVED_CLASS_S_SSR_PREV_WEEK --></DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+<td rowspan='3'></td>
+<td rowspan='2'  valign='top' align='left'>
+<DIV    id='win0div$ICField60'><table cellpadding='2' cellspacing='0' cols='1'  class='PABACKGROUNDINVISIBLEWBO'  width='131'>
+<tr><td width='129'>
+<table role='presentation'  border='0' id='ACE_$ICField60' cellpadding='0' cellspacing='0' cols='2' width='129' class='PABACKGROUNDINVISIBLE' style='border-style:none' >
+<tr>
+<td width='3' height='5'></td>
+<td width='126'></td>
+</tr>
+<tr>
+<td height='13'></td>
+<td  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SSR_NEXT_WEEK'><span id='DERIVED_CLASS_S_SSR_NEXT_WEEK$span'  class='SSSBUTTON_CANCELLINK' ><a name='DERIVED_CLASS_S_SSR_NEXT_WEEK' id='DERIVED_CLASS_S_SSR_NEXT_WEEK'  ptlinktgt='pt_peoplecode' tabindex='23' onclick='javascript:cancelBubble(event);' href="javascript:submitAction_win0(document.win0,'DERIVED_CLASS_S_SSR_NEXT_WEEK');"  class='SSSBUTTON_CANCELLINK' >Next Week &gt;&gt;</a></span><!-- DERIVED_CLASS_S_SSR_NEXT_WEEK --></DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='15' colspan='2'></td>
+<td colspan='2' rowspan='2'  valign='top' align='left'>
+<DIV  id='win0divOSR_DERIVED_RM_START_DTlbl'><label for='OSR_DERIVED_RM_START_DT' id='OSR_DERIVED_RM_START_DT_LBL' class='SSSTEXTTURQBOLD' >Start</label></DIV></td>
+<td colspan='2' rowspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divOSR_DERIVED_RM_START_DT'><input type='text' name='OSR_DERIVED_RM_START_DT' id='OSR_DERIVED_RM_START_DT' tabindex='-1' value="11/14/2022"  class='PSEDITBOX' style='width:68px; ' maxlength='10' onkeyup="if (isPromptKey(event))DatePrompt_win0('OSR_DERIVED_RM_START_DT','OSR_DERIVED_RM_START_DT','450',false);return false;" /><a class='PSHYPERLINK' name='OSR_DERIVED_RM_START_DT$prompt' id='OSR_DERIVED_RM_START_DT$prompt' role='button' aria-labelledby='OSR_DERIVED_RM_START_DT$prompt$img'tabindex='-1' onfocus='doFocus_win0(this,true,false);' href="javascript:DatePrompt_win0('OSR_DERIVED_RM_START_DT','OSR_DERIVED_RM_START_DT$prompt','450',false);"><img src="/cs/csosuct/cache85909/PT_CALENDAR_1.gif" alt='Calendar Start' title='Calendar Start' id='OSR_DERIVED_RM_START_DT$prompt$img' name='OSR_DERIVED_RM_START_DT$prompt$img' border='0' align='absmiddle' style='vertical-align:middle;' /></a>
+</DIV></td>
+<td colspan='2' rowspan='2'  valign='top' align='left'>
+<DIV  id='win0divOSR_DERIVED_RM_END_DTlbl'><label for='OSR_DERIVED_RM_END_DT' id='OSR_DERIVED_RM_END_DT_LBL' class='SSSTEXTTURQBOLD' >End</label></DIV></td>
+<td colspan='3' rowspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divOSR_DERIVED_RM_END_DT'><input type='text' name='OSR_DERIVED_RM_END_DT' id='OSR_DERIVED_RM_END_DT' tabindex='-1' value="11/14/2022"  class='PSEDITBOX' style='width:68px; ' maxlength='10' onkeyup="if (isPromptKey(event))DatePrompt_win0('OSR_DERIVED_RM_END_DT','OSR_DERIVED_RM_END_DT','450',false);return false;" /><a class='PSHYPERLINK' name='OSR_DERIVED_RM_END_DT$prompt' id='OSR_DERIVED_RM_END_DT$prompt' role='button' aria-labelledby='OSR_DERIVED_RM_END_DT$prompt$img'tabindex='-1' onfocus='doFocus_win0(this,true,false);' href="javascript:DatePrompt_win0('OSR_DERIVED_RM_END_DT','OSR_DERIVED_RM_END_DT$prompt','450',false);"><img src="/cs/csosuct/cache85909/PT_CALENDAR_1.gif" alt='Calendar End' title='Calendar End' id='OSR_DERIVED_RM_END_DT$prompt$img' name='OSR_DERIVED_RM_END_DT$prompt$img' border='0' align='absmiddle' style='vertical-align:middle;' /></a>
+</DIV></td>
+</tr>
+<tr>
+<td height='6' colspan='2'></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='10' colspan='7'></td>
+</tr>
+<tr>
+<td height='22'></td>
+<td colspan='4'  valign='top' align='left'>
+<DIV    id='win0divSSR_DUMMY_REC$0'>
+<table cellspacing='0' class='PSLEVEL1GRIDNBO'  id='SSR_DUMMY_REC$scroll$0' dir='ltr' cols='1' width='760' cellpadding='2'>
+<tr id='trSSR_DUMMY_REC$0_row1' valign='center' onClick="HighLightTR('rgb(212,219,217)','','trSSR_DUMMY_REC$0_row1');" onMouseOver="hoverLightTR('rgb(249,254,203)','',0,'trSSR_DUMMY_REC$0_row1');" onmouseout="hoverLightTR('rgb(249,254,203)','',1,'trSSR_DUMMY_REC$0_row1');">
+<td align='center'  width='680' height='18' class='PABACKGROUNDINVISIBLE' >
+<DIV    id='win0divDERIVED_CLASS_S_HTMLAREA$0'><div style="min-width:680px; " >
+<!-- Begin HTML Area DERIVED_CLASS_S_HTMLAREA$0 -->
+</div><!--  close Tools-generated div -->
+<div>
+
+<table cellspacing='0' cellpadding='2' width='100%' class='PSLEVEL3GRIDODDROW' id='WEEKLY_SCHED_HTMLAREA' summary='Weekly Schedule'>
+<colgroup span='1' width='9%' align='center' valign='middle'>
+<colgroup span='7' width='13%' align='center' valign='middle'><tr><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Time</th><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Monday<br>Nov 14</th><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Tuesday<br>Nov 15</th><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Wednesday<br>Nov 16</th><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Thursday<br>Nov 17</th><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Friday<br>Nov 18</th><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Saturday<br>Nov 19</th><th scope='col' align='center' class='PSLEVEL3GRIDODDROW' >Sunday<br>Nov 20</th></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >8:00AM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >9:00AM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >10:00AM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' STYLE="color:rgb(0,0,0);background-color:rgb(182,209,146);text-align: center;"><span class='' STYLE="color:rgb(0,0,0);background-color:rgb(182,209,146);">LATIN 2103 - 36798<br>Lecture<br>10:20AM - 11:15AM<br>Baker Systems Engineering 128<br>2022-08-23 - 2022-12-07</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >11:00AM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' STYLE="color:rgb(0,0,0);background-color:rgb(182,209,146);text-align: center;"><span class='' STYLE="color:rgb(0,0,0);background-color:rgb(182,209,146);">MDRNGRK 1103 - 18609<br>Lecture<br>11:30AM - 12:25PM<br>Baker Systems Engineering 128<br>2022-08-23 - 2022-12-07</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >12:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='6' STYLE="color:rgb(0,0,0);background-color:rgb(222,184,135);text-align: center;"><span class='' STYLE="color:rgb(0,0,0);background-color:rgb(222,184,135);" >ARABIC 5401 - 26241<br>Lecture<br>12:45PM - 2:05PM<br>Baker Systems Engineering 128<br>2022-08-23 - 2022-12-07<br><br><img border='0' src='/cs/csosuct/cache85909/PTADS_WARNING_ICN_1.gif' alt='Time Conflict' TITLE = 'Time Conflict'><br>ARABIC 5401 - 26112<br>Lecture<br>12:45PM - 2:05PM<br>Baker Systems Engineering 128<br>2022-08-23 - 2022-12-07</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >1:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >2:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >3:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >4:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >5:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='11' STYLE="color:rgb(0,0,0);background-color:rgb(222,184,135);text-align: center;"><span class='' STYLE="color:rgb(0,0,0);background-color:rgb(222,184,135);" >ISE 5640 - 10077<br>Lecture<br>5:30PM - 8:15PM<br>Baker Systems Engineering 128<br>2022-08-23 - 2022-12-07<br><br><img border='0' src='/cs/csosuct/cache85909/PTADS_WARNING_ICN_1.gif' alt='Time Conflict' TITLE = 'Time Conflict'><br>ISE 5640 - 10083<br>Lecture<br>5:30PM - 8:15PM<br>Baker Systems Engineering 128<br>2022-08-23 - 2022-12-07</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >6:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >7:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >8:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='4' scope="row"><span class='' >9:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr><tr><td class='PSLEVEL3GRIDODDROW' rowspan='1' scope="row"><span class='' >10:00PM</span></td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td><td class='PSLEVEL3GRIDODDROW'>&nbsp;</td></tr></table></div>
+<!-- End HTML Area -->
+</div>
+</DIV></td>
+</tr>
+</table>
+</DIV>
+</td>
+</tr>
+<tr>
+<td height='7' colspan='7'></td>
+</tr>
+<tr>
+<td height='101'></td>
+<td colspan='5'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_MONDAY_LBL'><table cellpadding='2' cellspacing='0' cols='1'  class='PSGROUPBOXWBO'  width='767'>
+<tr><td class='PSGROUPBOXLABEL'  align='left'><DIV    id='win0divDERIVED_CLASS_S_MONDAY_LBLGP'><a class='PSHYPERLINK PTCOLLAPSE_ARROW' title='Collapse section Display Options' name='DERIVED_CLASS_S_MONDAY_LBL' id='DERIVED_CLASS_S_MONDAY_LBL' tabindex='269' href="javascript:submitAction_win0(document.win0,'DERIVED_CLASS_S_MONDAY_LBL');" aria-expanded='true' role='button'><img src='/cs/csosuct/cache85909/PT_TRANS_PIX_1.png' class='PTCOLLAPSE' alt='Collapse section Display Options' name='DERIVED_CLASS_S_MONDAY_LBL$img' border='0' /></a>&nbsp;Display Options&nbsp;</DIV></td></tr>
+<tr><td width='765'>
+<table role='presentation'  border='0' id='ACE_DERIVED_CLASS_S_MONDAY_LBL' cellpadding='0' cellspacing='0' cols='7' width='765' class='PSGROUPBOX' style='border-style:none' >
+<tr>
+<td width='27' height='8'></td>
+<td width='236'></td>
+<td width='208'></td>
+<td width='104'></td>
+<td width='28'></td>
+<td width='104'></td>
+<td width='58'></td>
+</tr>
+<tr>
+<td height='1' colspan='4'></td>
+<td colspan='2' rowspan='2'  valign='top' align='left'>
+<DIV    id='win0div$ICField63'><table cellpadding='2' cellspacing='0' cols='1'  class='PABACKGROUNDINVISIBLEWBO'  width='131'>
+<tr><td width='129'>
+<table role='presentation'  border='0' id='ACE_$ICField63' cellpadding='0' cellspacing='0' cols='2' width='129' class='PABACKGROUNDINVISIBLE' style='border-style:none' >
+<tr>
+<td width='7' height='5'></td>
+<td width='122'></td>
+</tr>
+<tr>
+<td height='17'></td>
+<td  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SSR_REFRESH_CAL$38$'><span id='DERIVED_CLASS_S_SSR_REFRESH_CAL$38$$span'  class='SSSBUTTON_CONFIRMLINK' ><a name='DERIVED_CLASS_S_SSR_REFRESH_CAL$38$' id='DERIVED_CLASS_S_SSR_REFRESH_CAL$38$'  ptlinktgt='pt_peoplecode' tabindex='273' onclick='javascript:cancelBubble(event);' href="javascript:submitAction_win0(document.win0,'DERIVED_CLASS_S_SSR_REFRESH_CAL$38$');"  class='SSSBUTTON_CONFIRMLINK' >Refresh Calendar</a></span><!-- DERIVED_CLASS_S_SSR_REFRESH_CAL$38$ --></DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='23'></td>
+<td rowspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_MONDAY_LBL$30$'><input type='hidden' name='DERIVED_CLASS_S_MONDAY_LBL$30$$chk' id='DERIVED_CLASS_S_MONDAY_LBL$30$$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_MONDAY_LBL$30$' id='DERIVED_CLASS_S_MONDAY_LBL$30$' class='PSCHECKBOX' tabindex='270' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_MONDAY_LBL$30$$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_MONDAY_LBL$30$' id='DERIVED_CLASS_S_MONDAY_LBL$30$_LBL' class='PSCHECKBOX' >Monday</label>
+</DIV></td>
+<td rowspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_THURSDAY_LBL'><input type='hidden' name='DERIVED_CLASS_S_THURSDAY_LBL$chk' id='DERIVED_CLASS_S_THURSDAY_LBL$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_THURSDAY_LBL' id='DERIVED_CLASS_S_THURSDAY_LBL' class='PSCHECKBOX' tabindex='271' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_THURSDAY_LBL$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_THURSDAY_LBL' id='DERIVED_CLASS_S_THURSDAY_LBL_LBL' class='PSCHECKBOX' >Thursday</label>
+</DIV></td>
+<td rowspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SUNDAY_LBL'><input type='hidden' name='DERIVED_CLASS_S_SUNDAY_LBL$chk' id='DERIVED_CLASS_S_SUNDAY_LBL$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_SUNDAY_LBL' id='DERIVED_CLASS_S_SUNDAY_LBL' class='PSCHECKBOX' tabindex='272' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_SUNDAY_LBL$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_SUNDAY_LBL' id='DERIVED_CLASS_S_SUNDAY_LBL_LBL' class='PSCHECKBOX' >Sunday</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='5'></td>
+</tr>
+<tr>
+<td height='28'></td>
+<td nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_TUESDAY_LBL'><input type='hidden' name='DERIVED_CLASS_S_TUESDAY_LBL$chk' id='DERIVED_CLASS_S_TUESDAY_LBL$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_TUESDAY_LBL' id='DERIVED_CLASS_S_TUESDAY_LBL' class='PSCHECKBOX' tabindex='274' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_TUESDAY_LBL$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_TUESDAY_LBL' id='DERIVED_CLASS_S_TUESDAY_LBL_LBL' class='PSCHECKBOX' >Tuesday</label>
+</DIV></td>
+<td nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_FRIDAY_LBL'><input type='hidden' name='DERIVED_CLASS_S_FRIDAY_LBL$chk' id='DERIVED_CLASS_S_FRIDAY_LBL$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_FRIDAY_LBL' id='DERIVED_CLASS_S_FRIDAY_LBL' class='PSCHECKBOX' tabindex='275' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_FRIDAY_LBL$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_FRIDAY_LBL' id='DERIVED_CLASS_S_FRIDAY_LBL_LBL' class='PSCHECKBOX' >Friday</label>
+</DIV></td>
+<td colspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SHOW_AM_PM'><input type='hidden' name='DERIVED_CLASS_S_SHOW_AM_PM$chk' id='DERIVED_CLASS_S_SHOW_AM_PM$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_SHOW_AM_PM' id='DERIVED_CLASS_S_SHOW_AM_PM' class='PSCHECKBOX' tabindex='276' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_SHOW_AM_PM$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_SHOW_AM_PM' id='DERIVED_CLASS_S_SHOW_AM_PM_LBL' class='PSCHECKBOX' >Show AM/PM</label>
+</DIV></td>
+<td colspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divOSR_DERIVED_RM_OSR_SHOW_ROOM'><input type='hidden' name='OSR_DERIVED_RM_OSR_SHOW_ROOM$chk' id='OSR_DERIVED_RM_OSR_SHOW_ROOM$chk' value="Y" />
+<input type='checkbox' name='OSR_DERIVED_RM_OSR_SHOW_ROOM' id='OSR_DERIVED_RM_OSR_SHOW_ROOM' class='PSCHECKBOX' tabindex='277' value="Y" checked='checked' onclick="setupTimeout2();    this.form.OSR_DERIVED_RM_OSR_SHOW_ROOM$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='OSR_DERIVED_RM_OSR_SHOW_ROOM' id='OSR_DERIVED_RM_OSR_SHOW_ROOM_LBL' class='PSCHECKBOX' >Show Classes</label>
+</DIV></td>
+</tr>
+<tr>
+<td height='18'></td>
+<td nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_WEDNESDAY_LBL'><input type='hidden' name='DERIVED_CLASS_S_WEDNESDAY_LBL$chk' id='DERIVED_CLASS_S_WEDNESDAY_LBL$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_WEDNESDAY_LBL' id='DERIVED_CLASS_S_WEDNESDAY_LBL' class='PSCHECKBOX' tabindex='278' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_WEDNESDAY_LBL$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_WEDNESDAY_LBL' id='DERIVED_CLASS_S_WEDNESDAY_LBL_LBL' class='PSCHECKBOX' >Wednesday</label>
+</DIV></td>
+<td nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SATURDAY_LBL'><input type='hidden' name='DERIVED_CLASS_S_SATURDAY_LBL$chk' id='DERIVED_CLASS_S_SATURDAY_LBL$chk' value="Y" />
+<input type='checkbox' name='DERIVED_CLASS_S_SATURDAY_LBL' id='DERIVED_CLASS_S_SATURDAY_LBL' class='PSCHECKBOX' tabindex='279' value="Y" checked='checked' onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_SATURDAY_LBL$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_SATURDAY_LBL' id='DERIVED_CLASS_S_SATURDAY_LBL_LBL' class='PSCHECKBOX' >Saturday</label>
+</DIV></td>
+<td colspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divDERIVED_CLASS_S_SSR_DISP_TITLE'><input type='hidden' name='DERIVED_CLASS_S_SSR_DISP_TITLE$chk' id='DERIVED_CLASS_S_SSR_DISP_TITLE$chk' value="N" />
+<input type='checkbox' name='DERIVED_CLASS_S_SSR_DISP_TITLE' id='DERIVED_CLASS_S_SSR_DISP_TITLE' class='PSCHECKBOX' tabindex='280' value="Y" onclick="setupTimeout2();    this.form.DERIVED_CLASS_S_SSR_DISP_TITLE$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='DERIVED_CLASS_S_SSR_DISP_TITLE' id='DERIVED_CLASS_S_SSR_DISP_TITLE_LBL' class='PSCHECKBOX' >Show Class Title</label>
+</DIV></td>
+<td colspan='2' nowrap='nowrap'  valign='top' align='left'>
+<DIV    id='win0divOSR_DERIVED_RM_OSR_SHOW_EVENTS'><input type='hidden' name='OSR_DERIVED_RM_OSR_SHOW_EVENTS$chk' id='OSR_DERIVED_RM_OSR_SHOW_EVENTS$chk' value="Y" />
+<input type='checkbox' name='OSR_DERIVED_RM_OSR_SHOW_EVENTS' id='OSR_DERIVED_RM_OSR_SHOW_EVENTS' class='PSCHECKBOX' tabindex='281' value="Y" checked='checked' onclick="setupTimeout2();    this.form.OSR_DERIVED_RM_OSR_SHOW_EVENTS$chk.value=(this.checked?'Y':'N');doFocus_win0(this,false,true);" /><label for='OSR_DERIVED_RM_OSR_SHOW_EVENTS' id='OSR_DERIVED_RM_OSR_SHOW_EVENTS_LBL' class='PSCHECKBOX' >Show Events</label>
+</DIV></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</DIV></td>
+</tr>
+<tr>
+<td height='10' colspan='7'></td>
+</tr>
+</table>
+]]></FIELD>
+<SYSVAR id='sysvar'><![CDATA[nMaxSavedStates=5;
+sHistURL="https://courses.osu.edu/psc/csosuct/EMPLOYEE/PUB/c/OSR_CUSTOM_MENU.OSR_ROOM_MATRIX.GBL?page=OSR_ROOM_MATRIX&ICAJAX=1&ICNAVTYPEDROPDOWN=0&ICType=Panel&ICElementNum=0&ICStateNum=2&ICAction=DERIVED_CLASS_S_SSR_REFRESH_CAL&ICModelCancel=0&ICXPos=0&ICYPos=0&ResponsetoDiffFrame=-1&TargetFrameName=None&FacetPath=None&ICFocus=&ICSaveWarningFilter=0&ICChanged=-1&ICSkipPending=0&ICAutoSave=0&ICResubmit=0&ICSID=qH%2BToGHdCMZnvER7Bj%2F4YYhVF9igunI9P2fEVDO%2FYxM%3D&ICActionPrompt=false&ICBcDomData=UnknownValue&ICPanelName=&ICFind=&ICAddCount=&ICAppClsData=&OSR_DERIVED_RM_FACILITY_ID=BE0128&DERIVED_CLASS_S_START_DT=11%2F14%2F2022&DERIVED_CLASS_S_MEETING_TIME_START=8%3A00AM&DERIVED_CLASS_S_MEETING_TIME_END=10%3A00PM&OSR_DERIVED_RM_START_DT=11%2F14%2F2022&OSR_DERIVED_RM_END_DT=11%2F14%2F2022&DERIVED_CLASS_S_MONDAY_LBL$30$$chk=Y&DERIVED_CLASS_S_MONDAY_LBL$30$=Y&DERIVED_CLASS_S_THURSDAY_LBL$chk=Y&DERIVED_CLASS_S_THURSDAY_LBL=Y&DERIVED_CLASS_S_SUNDAY_LBL$chk=Y&DERIVED_CLASS_S_SUNDAY_LBL=Y&DERIVED_CLASS_S_TUESDAY_LBL$chk=Y&DERIVED_CLASS_S_TUESDAY_LBL=Y&DERIVED_CLASS_S_FRIDAY_LBL$chk=Y&DERIVED_CLASS_S_FRIDAY_LBL=Y&DERIVED_CLASS_S_SHOW_AM_PM$chk=Y&DERIVED_CLASS_S_SHOW_AM_PM=Y&OSR_DERIVED_RM_OSR_SHOW_ROOM$chk=Y&OSR_DERIVED_RM_OSR_SHOW_ROOM=Y&DERIVED_CLASS_S_WEDNESDAY_LBL$chk=Y&DERIVED_CLASS_S_WEDNESDAY_LBL=Y&DERIVED_CLASS_S_SATURDAY_LBL$chk=Y&DERIVED_CLASS_S_SATURDAY_LBL=Y&DERIVED_CLASS_S_SSR_DISP_TITLE$chk=N&OSR_DERIVED_RM_OSR_SHOW_EVENTS$chk=Y&OSR_DERIVED_RM_OSR_SHOW_EVENTS=Y";
+bCloseModal = false;
+bICList = false;
+bHtml5Doc = true;
+bClearBackState=false;
+bPageTransfered=false;
+bTransferAnimate=false;
+UpdateHistory('', '', 'returntolastpage@0', 'OSR_ROOM_MATRIX', 1, '', null, 0);
+corsHistoryTansaction();
+bCleanHtml = false;
+bDefer = true;
+bCDATA = false;
+bAccessibleLayout = false;
+bGenDomInfo = false;
+]]></SYSVAR></PAGE>

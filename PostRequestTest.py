@@ -18,7 +18,8 @@ post_data = {'OSR_DERIVED_RM_FACILITY_ID': 'BE0128',
     'DERIVED_CLASS_S_MEETING_TIME_START': '8:00AM', 
     'DERIVED_CLASS_S_MEETING_TIME_END': '10:00PM', 
     'OSR_DERIVED_RM_START_DT': '11/01/2022', 
-    'OSR_DERIVED_RM_END_DT': '11/01/2022'}
+    'OSR_DERIVED_RM_END_DT': '11/01/2022'
+}
 # encoding the string to be used as a query
 postfields = urlencode(post_data)
 #setting the cURL for POST operation
